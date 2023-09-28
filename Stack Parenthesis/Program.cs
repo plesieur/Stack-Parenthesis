@@ -4,37 +4,27 @@ namespace Stack_Parenthesis
 {
 
     //Class to create test data for Matching Parenthesis Assignment 
-    public class TestData
+    public class TestData 
     {
         private int _testCaseNum;
-        private static int NumTestCases = 15;
-        private static char[] test0 = new[] { '{', '[', '(', ')', ']', '}' };  //Good
-        private static char[] test1 = new[] { '{', '[', '(', ')', ']', ']' };  //Bad
-        private static char[] test2 = new[] { '{', '[', '(', ')', ']' };       //Bad
-        private static char[] test3 = new[] { '{', '(', ')', '}', '{', '}' };  //Good
-        private static char[] test4 = new[] { '{', '[', '(', ')', '(', ')', ']', '}' };   //Good
-        private static char[] test5 = new[] { '{', '[', '(', ')', '(', ')', ')', '}' };   //Bad
-        private static char[] test6 = new[] { '{', '[', '(', ')', '(', ')', ']', '}', '}' };   //Bad
-        private static char[] test7 = new[] { '{', '(', ')', '}', '[', ']' };  //Good
-        private static char[] test8 = new[] { '{', '[', '(' };  //Bad
-        private static char[] test9 = new[] { ')', ']', '}' };  //Bad
-        private static char[] test10 = new[] { '{' };  //Bad
-        private static char[] test11 = new[] { ']' };  //Bad
-        private static char[] test12 = new[] { '{', '}' };  //Good
-        private static char[] test13 = new[] { '(', ']' };  //Bad
-        private static char[] test14 = new[] { '(', '[', ')', ']' };  //Bad
+        private static int NumTestCases = 6;
+        private static string test0 = "1+2*3";      //7
+        private static string test1 = "1*2+3";      //5
+        private static string test2 = "1+2*3+4";    //11
+        private static string test3 = "1*2+3*4";    //14
+        private static string test4 = "12*2+100/4"; //49
+        private static string test5 = "12*2-100/4"; //-1
 
-        private char[][] testCasePtr = new[] { test0, test1, test2, test3, test4, test5, test6, test7, test8,
-                                                test9, test10, test11, test12, test13, test14 };
-
+                                
+        private string[] testCasePtr = new[] { test0, test1, test2, test3, test4, test5 }; 
         public TestData()
         {
             _testCaseNum = 0;
         }
 
-        public char[] GetTestData()
+        public string GetTestData()
         {
-            char[] rv = null;
+            string rv = null;
 
             if (_testCaseNum < NumTestCases)
             {
@@ -53,7 +43,7 @@ namespace Stack_Parenthesis
         {
             //Test Data
             TestData testData = new TestData();
-            char[] testP;
+            string testP;
 
             while (true)
             {
@@ -66,7 +56,7 @@ namespace Stack_Parenthesis
                     Console.Write(testP[i]);
                 }
 
-                //Determine if String is Good or Bad and print results
+                //Evaluate String and Print result
 
 
                 //Print newline
