@@ -7,7 +7,7 @@ namespace Stack_Parenthesis
     public class TestData
     {
         private int _testCaseNum;
-        private static int NumTestCases = 15;
+        private static int NumTestCases = 15;     //Number of test cases
         private static char[] test0 = new[] { '{', '[', '(', ')', ']', '}' };  //Good
         private static char[] test1 = new[] { '{', '[', '(', ')', ']', ']' };  //Bad
         private static char[] test2 = new[] { '{', '[', '(', ')', ']' };       //Bad
